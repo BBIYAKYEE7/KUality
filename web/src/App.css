@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.logot{
+  font-family: Montserrat;
+  font-Weight: '650',
+}
+
+.body {
+  font-family: Pretendard;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  font-family: Pretendard;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #FFF;
+}
+
+.box1{
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.5); /* 흰색의 반투명 배경 */
+  border: 10px solid white; /* 흰색 테두리 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 흰색의 반투명 그림자 */
+  position: sticky;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.bt{
+  background: none; /* 박스 배경 제거 */
+  border: none; /* 테두리 제거 */
+  color: #FFF; /* 글자 색상 설정 */
+  text-decoration: none; /* 기본 밑줄 제거 */
+  cursor: pointer; /* 마우스 커서를 손가락 모양으로 변경 */
+  font-size: 1em; /* 글자 크기 설정 */
+  padding: 0; /* 패딩 제거 */
+  margin: 20px;
+}
+
+.bt::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: #FFF;
+  transition: all 0.5s ease;
+}
+
+.bt:focus, .bt:active {
+  text-decoration: underline; /* 선택되면 밑줄 표시 */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
