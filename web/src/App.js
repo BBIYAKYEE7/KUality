@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import logo from './img/logo.png';
+import logo from './logo.png';
 import './App.css';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const [bgColor, setBgColor] = useState('white');
-  const [selectedYear, setSelectedYear] = useState('2022'); // 현재 선택된 연도를 추적하는 상태
+  const [selectedYear, setSelectedYear] = useState('박현'); // 현재 선택된 연도를 추적하는 상태
 
-  const awards = { // 수상 목록
-    '2022': ['Award 1', 'Award 2', 'Award 3'],
-    '2024': ['국제과학기술경진대회(ISEF) 준우승', '해커톤 최종 준우승', '메이커톤 최종 3위', '2024 엔지니어링산업 경진대회 대상'],
-    '2023': ['해커톤 최종 준우승', '2023 경기창고 최종 준우승','메이커톤 최종 준우승', '한국코드페어 대상 수상', '2023 SW 인재 페스티벌 해커톤 최종 우승, 준우승', '국제과학기술경진대회 국가대표발탁'],
-    '2025': ['여러분의 차례입니다.'],
+  const team = { // 운영진 소개
+    '박현': ['System Hacking (Pwnable) / Cryptography 교육담당', '핵테온 / 암호분석경진대회 / 사이버공격방어대회 / 화이트햇 콘테스트 / 코드게이트 / WACON 등 다수의 해킹대회 수상 및 본선 진출', '현 Theori 드림핵 팀 재직중', 'TeamH4C'],
+    '황동현': ['Reverse Engineering / Blockchain 교육', 'Ethereum Foundation karalabe/ssz fuzzer development', '현재 Ethereum Foundation과 프로젝트 합의 중'],
+    '김민욱': ['Web Hacking 교육', 'LG U+ 해킹대회, 코드게이트, WACON, 화이트햇 콘테스트, KOSPO, 한국연구재단 등 다수의 연구 참여 및 해킹대회 수상 및 본선 진출', 'BusinessH4C AI, Web2 Research 팀 재직 중']
   };
-
   useEffect(() => {
-    document.title = "REBOOT";
+    document.title = "KUality";
     const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
@@ -76,7 +74,7 @@ function App() {
             fontWeight: '650',
             fontSize: '2.5rem',
           }}>
-          REBOOT</p>
+          KUality</p>
         <p style={{
           color: '#000',
           position: 'absolute',
@@ -89,7 +87,7 @@ function App() {
         }}>
           Scroll Slowly For More Information
         </p>
-        <div style={{ height: '15000px' }}>
+        <div style={{ height: '9600px' }}>
           <p className='logot'
             style={{
               fontWeight: '600',
@@ -99,7 +97,7 @@ function App() {
               opacity: scrollPosition > 100 && scrollPosition < 1000 ? 1 : 0,
               transform: scrollPosition > 100 && scrollPosition < 700 ? 'translateY(0)' : 'translateY(100px)',
               transition: 'opacity 0.5s, transform 0.5s'
-            }}>REBOOT?</p>
+            }}>KUality?</p>
           <p style={{
             fontSize: '10vim',
             fontWeight: '600',
@@ -109,10 +107,10 @@ function App() {
             transform: scrollPosition > 1400 && scrollPosition < 2000 ? 'scale(1)' : 'scale(0.5)', // scale 변경
             transition: 'opacity 0.5s, transform 0.5s' // transform 추가
           }}>
-            <a className='logot'>REBOOT</a>에서 경험을 쌓아 실력으로 증명하리라.
+            <a className='logot'>KUality</a>, 고려대학교 세종캠퍼스 유일 해킹 <strong>연구</strong> 동아리
           </p>
-          <p style={{ fontSize: '16vim', fontWeight: '500', position: 'sticky', top: '50%', opacity: scrollPosition > 2300 && scrollPosition < 3200 ? 1 : 0, transition: 'opacity 0.5s' }}>이론적인 SW 보다는 <strong>직접</strong> 경험하는 SW를 추구하는 <a className='logot'>REBOOT</a>입니다.</p>
-          <p style={{ fontSize: '16vim', fontWeight: '500', position: 'sticky', top: '50%', opacity: scrollPosition > 3600 && scrollPosition < 4400 ? 1 : 0, transition: 'opacity 0.5s' }}>지금까지 <a className='logot'>REBOOT</a>가 이뤄낸 성과입니다.</p>
+          <p style={{ fontSize: '16vim', fontWeight: '500', position: 'sticky', top: '50%', opacity: scrollPosition > 2300 && scrollPosition < 3200 ? 1 : 0, transition: 'opacity 0.5s' }}>컴퓨터를 잘 몰라도 한 학년이 끝날 때 <strong>전문가로</strong> 성장시키는</p>
+          <p style={{ fontSize: '16vim', fontWeight: '500', position: 'sticky', top: '50%', opacity: scrollPosition > 3600 && scrollPosition < 4400 ? 1 : 0, transition: 'opacity 0.5s' }}>동아리원을 교육하는 운영진을 소개합니다.</p>
           <div style={{
             position: 'sticky',
             top: '30%',
@@ -120,14 +118,14 @@ function App() {
             transform: scrollPosition > 4800 && scrollPosition < 5600 ? 'translateY(0)' : 'translateY(100px)',
             transition: 'opacity 0.5s, transform 0.5s'
           }}>
-            <h2>수상실적</h2>
+            <h2>운영진(교육팀)</h2>
             <div>
-              {Object.keys(awards).map(year => (
+              {Object.keys(team).map(year => (
                 <button onClick={() => setSelectedYear(year)} className='bt'>{year}</button>
               ))}
             </div>
             <ul style={{fontSize: '1.8rem'}}>
-              {awards[selectedYear].map(award => (
+              {team[selectedYear].map(award => (
                 <li>{award}</li>
               ))}
             </ul>
@@ -141,7 +139,7 @@ function App() {
             transform: scrollPosition > 6000 && scrollPosition < 6700 ? 'scale(1)' : 'scale(0.5)', // scale 변경
             transition: 'opacity 0.5s, transform 0.5s' // transform 추가
           }}>
-            어때요? 실력으로 증명하고 싶지 않으신가요?
+            어때요. 자신감을 가질만 하죠?
           </p>
           <p style={{
             fontSize: '10vim',
@@ -152,7 +150,7 @@ function App() {
             transform: scrollPosition > 7000 && scrollPosition < 7700 ? 'scale(1)' : 'scale(0.5)', // scale 변경
             transition: 'opacity 0.5s, transform 0.5s' // transform 추가
           }}>
-            어려분의 AI/SW를 향한 열정을 <a className='logot'>REBOOT</a>에서 보여주세요!
+            고려대학교 세종캠퍼스 유일의 해킹 연구 동아리.
           </p>
           <p style={{
             fontSize: '10vim',
@@ -163,7 +161,7 @@ function App() {
             transform: scrollPosition > 8000 && scrollPosition < 8700 ? 'scale(1)' : 'scale(0.5)', // scale 변경
             transition: 'opacity 0.5s, transform 0.5s' // transform 추가
           }}>
-            <a className='logot'>We create skills for your future.</a>
+            <a className='logot'>Create your skills form KUality.</a>
           </p>
         </div>
       </header>
