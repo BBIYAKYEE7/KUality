@@ -16,12 +16,7 @@ KUality는 고려대학교 세종캠퍼스 유일의 해킹 연구 동아리입�
 git clone https://github.com/your-org/kuality.git
 cd kuality-website
 
-# 2. 백엔드 실행
-cd backend
-pip install -r requirements.txt
-python manage.py runserver
-
-# 3. 프론트엔드 실행
+# 2. 프론트엔드 실행
 cd frontend
 npm install
 npm run dev
