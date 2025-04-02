@@ -1,6 +1,6 @@
 # 🛠 KUality 해킹 연구 동아리 웹사이트
 
-KUality는 고려대학교 세종캠퍼스 유일의 해킹 연구 동아리입니다. 해킹 및 보안 연구를 위한 자료 공유, 교육, CTF 문제 출제 등의 기능을 제공하는 공식 웹사이트입니다.
+KUality는 고려대학교 세종캠퍼스 유일의 해킹 연구 동아리입니다. 동아리 홍보를 위한 공식 웹사이트입니다.
 
 ## 🚀 주요 기능
 - 🎓 운영진 및 교육 프로그램 소개
@@ -13,8 +13,8 @@ KUality는 고려대학교 세종캠퍼스 유일의 해킹 연구 동아리입�
 ## 🛠 설치 및 실행 방법
 ```bash
 # 1. 레포지토리 클론
-git clone https://github.com/your-org/kuality.git
-cd kuality-website
+git clone https://github.com/BBIYAKEYEE7/kuality.git
+cd kuality/web
 
 # 2. 프론트엔드 실행
 cd frontend
