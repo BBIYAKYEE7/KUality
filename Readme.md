@@ -3,18 +3,12 @@
 KUality는 고려대학교 세종캠퍼스 유일의 해킹 연구 동아리입니다. 해킹 및 보안 연구를 위한 자료 공유, 교육, CTF 문제 출제 등의 기능을 제공하는 공식 웹사이트입니다.
 
 ## 🚀 주요 기능
-- 🔐 회원 관리 (가입, 로그인, 권한 설정)
-- 📚 해킹 및 보안 관련 자료 공유
-- 🏆 CTF 문제 출제 및 풀이
-- 📢 공지사항 및 커뮤니티 게시판
 - 🎓 운영진 및 교육 프로그램 소개
+- 💻 KUality 홍보 및 소개
 
 ## 🏗 기술 스택
 - **Frontend**: React (Next.js)
-- **Backend**: Express.js / Django
-- **Database**: PostgreSQL / MongoDB
-- **Authentication**: JWT / OAuth
-- **Deployment**: Docker / AWS
+- **Deployment**: Vercel
 
 ## 🛠 설치 및 실행 방법
 ```bash
