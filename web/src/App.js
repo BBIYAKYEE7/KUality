@@ -118,15 +118,22 @@ function App() {
             transform: scrollPosition > 4800 && scrollPosition < 5600 ? 'translateY(0)' : 'translateY(100px)',
             transition: 'opacity 0.5s, transform 0.5s'
           }}>
-            <h2>운영진(교육팀)</h2>
+            <h2 style={{ fontSize: 'clamp(1rem, 2.5vw, 2rem)' }}>운영진(교육팀)</h2>
             <div>
               {Object.keys(team).map(year => (
-                <button onClick={() => setSelectedYear(year)} className='bt'>{year}</button>
+                <button
+                  key={year}
+                  onClick={() => setSelectedYear(year)}
+                  className='bt'
+                  style={{ fontSize: 'clamp(0.75rem, 2vw, 1.5rem)' }}
+                >
+                  {year}
+                </button>
               ))}
             </div>
-            <ul style={{fontSize: '1.8rem'}}>
-              {team[selectedYear].map(award => (
-                <li>{award}</li>
+            <ul style={{ fontSize: 'clamp(1rem, 2vw, 2rem)' }}>
+              {team[selectedYear].map((award, idx) => (
+                <li key={idx}>{award}</li>
               ))}
             </ul>
           </div>
